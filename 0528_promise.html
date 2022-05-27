@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      const promise = new Promise(function (resolve, reject) {
+        // return resolve("resolve");
+          return reject ('reject');
+      });
+      promise
+        .then((response) => {
+          console.log("then");
+          console.log(response);
+        })
+        .catch((response) => {
+          console.log("catch");
+          console.log(response);
+        })
+
+        // finally代表 不管對錯都會執行
+        .finally(() => {
+          console.log("finally");
+        });
+    </script>
+  </body>
+</html>
