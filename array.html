@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const orderData = [
+        {"name":"咖啡拿鐵",
+        "menu_categories":"經典義式系列",
+        "price": 70,
+        },
+        {"name":"焦糖瑪奇朵 ",
+        "menu_categories":"經典義式系列",
+        "price": 80,
+        },
+        {"name":"卡布奇諾 ",
+        "menu_categories":"經典義式系列",
+        "price": 70,
+        },
+        ];
+
+
+        // map 的參數，依序是value index array
+        const orderDataPrice = orderData.map((data) => {return data.price});
+        // 簡化寫法 const orderDataPrice = orderData.map(({ price }) => price);
+        console.log(orderDataPrice);
+
+
+        
+
+
+
+
+
+
+        // reduce 的參數，依序是 accumulator value key array
+        const orderDataPriceTotal = orderData.reduce((item)=>{
+            return item.price
+        },0);
+        console.log(orderDataPriceTotal);
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
